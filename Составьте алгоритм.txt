@@ -1,0 +1,73 @@
+﻿/*
+
+Если введенное число больше 7, то вывести “Привет”
+
+*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int number = scanner.nextInt();
+        
+        if (number > 7) {
+            System.out.println("Привет");
+        }
+    }
+}
+
+/*
+
+Если введенное имя совпадает с “Вячеслав”, то вывести “Привет, Вячеслав”, 
+если нет, то вывести "Нет такого имени"
+
+*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите имя: ");
+        String name = scanner.nextLine();
+
+        if (name.equals("Вячеслав")) {
+            System.out.println("Привет, Вячеслав");
+        } else {
+            System.out.println("Нет такого имени");
+        }
+    }
+}
+	
+/*
+
+На входе есть числовой массив, необходимо вывести элементы массива кратные 3
+
+*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите размер массива: ");
+        int size = scanner.nextInt();
+        
+        int[] array = new int[size];
+        
+        System.out.println("Введите элементы массива:");
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+        
+        System.out.println("Элементы массива, кратные 3:");
+        for (int num : array) {
+            if (num % 3 == 0) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}
